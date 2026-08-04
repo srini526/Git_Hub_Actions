@@ -1,0 +1,20 @@
+name: Github builtin variable
+
+on:
+    workflow_dispatch
+
+env:
+    MY_NAME: Srinivas
+
+jobs:
+
+    demo:
+
+        runs-on: ubuntu-latest
+
+        steps:
+            - run : echo "Name = $MY_NAME"
+            - run : echo "Repository = $GITHUB_REPOSITORY"
+            - run : echo "Branch = $GITHUB_REF_NAME"
+            - run : echo "Commit = $GTIHUB_SHA"
+            - run : echo "Actor = $GITHUB_ACTOR"
