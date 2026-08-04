@@ -1,7 +1,7 @@
 name: practice
 
 on: 
-    push:
+    #push:
     
     workflow_dispatch:
 
