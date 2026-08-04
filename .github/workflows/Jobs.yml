@@ -12,18 +12,21 @@ jobs:
             - run: Building
 
     Test:
+        needs: Build
         runs-on: ubuntu-latest
 
         steps:
             - run : echo this is Tests
     
     Deploy:
+        needs: Test
         runs-on: ubuntu-latest
 
         steps:
             - run: echo this is Deploy
 
     Cleanup:
+        needs: Deploy
         runs-on: ubuntu-latest
 
         steps:
