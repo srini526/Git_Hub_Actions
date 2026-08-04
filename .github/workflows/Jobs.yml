@@ -33,5 +33,5 @@ jobs:
 
         steps:
             - run: echo this is clean UP
-            
-            - run: Manual work flow executed
+
+            - run: echo Manual work flow executed
