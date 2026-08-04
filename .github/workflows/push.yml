@@ -1,0 +1,13 @@
+name: practice
+
+on: 
+    push:
+    
+    workflow_dispatch:
+
+jobs:
+
+    Job1:
+        runs-on: ubuntu-latest
+        steps:
+            - run : echo Workflow Executed
