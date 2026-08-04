@@ -16,5 +16,5 @@ jobs:
             - run : echo "Name = $MY_NAME"
             - run : echo "Repository = $GITHUB_REPOSITORY"
             - run : echo "Branch = $GITHUB_REF_NAME"
-            - run : echo "Commit = $GTIHUB_SHA"
+            - run : echo "Commit = $GITHUB_SHA"
             - run : echo "Actor = $GITHUB_ACTOR"
