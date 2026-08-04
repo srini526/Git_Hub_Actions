@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - run: Building
+            - run: echo Building
 
     Test:
         needs: Build
