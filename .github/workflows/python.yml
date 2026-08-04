@@ -10,5 +10,5 @@ jobs:
 
     runs-on: ubuntu-latest
 
-      -name: print massage
+      -name: Print Message
        run: echo "Hello github Action"
