@@ -27,3 +27,5 @@ jobs:
       - name: Check Python Version
         run: python --version
       
+      - name: Run App.py
+        run: python app.py
