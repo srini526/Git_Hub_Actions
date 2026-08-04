@@ -6,9 +6,12 @@ on:
       - main
 
 jobs:
-  hello:
+  demo:
 
     runs-on: ubuntu-latest
     steps:
-      - name: Print Message
-        run: echo "Hello github Action"
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: List files
+        run: ls -la
