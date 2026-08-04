@@ -1,7 +1,9 @@
 name: multiple jobs
 
 on:
-    push:
+    workflow_dispatch:
+    #push:
+        
 
 jobs:
 
@@ -31,3 +33,5 @@ jobs:
 
         steps:
             - run: echo this is clean UP
+            
+            - run: Manual work flow executed
