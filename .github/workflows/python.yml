@@ -1,4 +1,4 @@
-name : First workflow
+name : Learning GitHub Actions
 
 on:
   push:
