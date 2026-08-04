@@ -16,4 +16,4 @@ jobs:
           python-version: "3.13"
 
       - run: python --version
-      - run: "GitHub Actions are Awesome"
+      - run: echo "GitHub Actions are Awesome"
