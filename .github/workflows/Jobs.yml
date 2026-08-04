@@ -5,14 +5,26 @@ on:
 
 jobs:
 
-    job1:
+    Build:
         runs-on: ubuntu-latest
 
         steps:
-            - run: echo this is Job1
+            - run: Building
 
-    job2:
+    Test:
         runs-on: ubuntu-latest
 
         steps:
-            - run : echo this is job2
+            - run : echo this is Tests
+    
+    Deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - run: echo this is Deploy
+
+    Cleanup:
+        runs-on: ubuntu-latest
+
+        steps:
+            - run: echo this is clean UP
