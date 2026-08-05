@@ -9,7 +9,7 @@ jobs:
             - run: echo "Always run"
 
             # - name: Main Branch only
-            #   if: ${{github.ref_name == 'main'}}
+            #   
             #   run: |
             #     echo "This runs only on main"
             - name: Development
