@@ -1,6 +1,6 @@
 name: Expression Demo
 on:
-    workflow_dispatch
+    workflow_dispatch:
 
 env:
     COURSE: GitHub Actions
@@ -10,17 +10,19 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-        - name: Repository
-          run: echo "${{ github.repository}}"
+        # - name: Repository
+        #   run: echo "${{ github.repository}}"
 
-        - name: Actor
-          run: echo "${{github.actor}}"
+        # - name: Actor
+        #   run: echo "${{github.actor}}"
 
-        - name: Branch
-          run: echo "${{github.ref_name}}"
+        # - name: Branch
+        #   run: echo "${{github.ref_name}}"
         
-        - name: Workflow
-          run: echo "${{github.workflow}}"
+        # - name: Workflow
+        #   run: echo "${{github.workflow}}"
 
-        - name: Environmental Varialble
-          run: echo "${{env.COURSE}}"
+        # - name: Environmental Varialble
+        #   run: echo "${{env.COURSE}}"
+            
+        - run: echo "Hello ${{github.actor}}"
