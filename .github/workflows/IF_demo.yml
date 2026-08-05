@@ -1,0 +1,14 @@
+name: if Demo
+on:
+    workflow_dispatch:
+
+jobs:
+    demo:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Always run"
+
+            - name: Main Branch only
+              if: ${{github.ref_name == 'main'}}
+              run: |
+                echo "This runs only on main"
