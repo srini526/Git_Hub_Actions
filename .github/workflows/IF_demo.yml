@@ -18,6 +18,6 @@ jobs:
                 echo "Development Build"
 
             - name: Testing
-              if: ${{github.ref_name == 'dev' || runner.os == 'Linux'}}
+              if: ${{success()}}
               run: |
                 echo "Testing....."
