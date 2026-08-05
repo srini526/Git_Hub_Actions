@@ -7,15 +7,16 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Create Report
+            - name: Create Report and file
               run: |
-               echo "Name: Srinivas" > student.txt
-               echo "Age: 21" >> student.txt
-               echo "City: Pune" >> student.txt
+                mkdir reports
+                echo "Name: Srinivas" > reports/student1.txt
+                echo "Age: 21" >> reports/student1.txt
+                echo "City: Pune" >> reports/student1.txt
 
             - name: Upload Report
               uses: actions/upload-artifact@v4
 
               with:
                 name: Student_report
-                path: student.txt
+                path: reports/
