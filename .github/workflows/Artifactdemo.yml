@@ -1,0 +1,12 @@
+name: artifact demo
+on:
+    workflow_dispatch:
+
+jobs:
+    demo:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Create file
+              run: |
+               echo "Hello GitHub Actions" > report.txt
