@@ -17,3 +17,5 @@ jobs:
             - name: Print Student
               run: |
                 echo "Name = ${{steps.student.outputs.Name}}"
+                echo "Age = ${{steps.student.outputs.Age}}"
+                echo "City = ${{steps.student.outputs.City}}"
