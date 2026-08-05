@@ -9,11 +9,13 @@ jobs:
         steps:
             - name: Create Report
               run: |
-               echo "GitHub Actions Report" > report.txt
+               echo "Name: Srinivas" > student.txt
+               echo "Age: 21" >> student.txt
+               echo "City: Pune" >> student.txt
 
             - name: Upload Report
               uses: actions/upload-artifact@v4
 
               with:
-                name: MyReport
-                path: report.txt
+                name: Student_report
+                path: student.txt
