@@ -8,10 +8,12 @@ jobs:
 
         steps:
             - name: Generate Version
-              id: version_id
+              id: student
               run: |
-                echo "VERSION=1.0.13" >> $GITHUB_OUTPUT
+                echo "Name=Srini" >> $GITHUB_OUTPUT
+                echo "Age=20" >> $GITHUB_OUTPUT
+                echo "City=Pune" >> $GITHUB_OUTPUT
 
-            - name: Print Version
+            - name: Print Student
               run: |
-                echo "Version = ${{steps.version_id.outputs.VERSION}}"
+                echo "Name = ${{steps.student.outputs.Name}}"
