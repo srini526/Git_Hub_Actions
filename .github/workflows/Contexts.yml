@@ -1,0 +1,25 @@
+name: Contexts Demo
+on:
+    workflow_dispatch:
+
+env:
+    COURSE: GitHub Actions
+
+jobs:
+    demo:
+        runs-on : ubuntu-latest
+
+        steps:
+            - name: Print GitHub Context
+              run: |
+                echo "Actor: ${{github.actor}}"
+                echo "Branch: ${{github.ref_name}}"
+
+            - name: Print Environmental Variable
+              run: |
+                echo "course: ${{env.COURSE}}"
+
+            - name: Print Runner Context
+              run: |
+                echo "OS: ${{runner.os}}"
+                echo "Architecture: ${{runner.arch}}"
