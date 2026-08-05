@@ -16,3 +16,8 @@ jobs:
               if: ${{github.ref_name == 'dev' && runner.os == 'Linux'}}
               run: |
                 echo "Development Build"
+
+            - name: Testing
+              if: ${{github.ref_name == 'dev' || runner.os == 'Linux'}}
+              run: |
+                echo "Testing....."
