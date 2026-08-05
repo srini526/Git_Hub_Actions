@@ -8,7 +8,11 @@ jobs:
         steps:
             - run: echo "Always run"
 
-            - name: Main Branch only
-              if: ${{github.ref_name == 'main'}}
+            # - name: Main Branch only
+            #   if: ${{github.ref_name == 'main'}}
+            #   run: |
+            #     echo "This runs only on main"
+            - name: Development
+              if: ${{github.ref_name == 'dev' && runner.os == 'Linux'}}
               run: |
-                echo "This runs only on main"
+                echo "Development Build"
