@@ -1,0 +1,26 @@
+name: Expression Demo
+on:
+    workflow_dispatch
+
+env:
+    COURSE: GitHub Actions
+
+jobs:
+  demo:
+
+    runs-on: ubuntu-latest
+    steps:
+        - name: Repository
+          run: echo "${{ github.repository}}"
+
+        - name: Actor
+          run: echo "${{github.actor}}"
+
+        - name: Branch
+          run: echo "${{github.ref_name}}"
+        
+        - name: Workflow
+          run: echo "${{github.workflow}}"
+
+        - name: Environmental Varialble
+          run: echo "${{env.COURSE}}"
