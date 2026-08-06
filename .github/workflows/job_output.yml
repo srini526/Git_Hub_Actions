@@ -22,8 +22,15 @@ jobs:
        steps:
           - name: Report get
             run: |
-                echo "Student is ${{needs.naam.outputs.student_name}}"
+                echo "Hello ${{needs.naam.outputs.student_name}}"
 
+    bye:
+        needs: naam
+        runs-on: ubuntu-latest
 
+        steps:
+            - name: Bye him
+              run: |
+                echo "Bye ${{needs.naam.outputs.student_name}}"
 
      
